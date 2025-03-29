@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    background-color: #1a1f2b;
+}
+a{
+    text-decoration: none;
+}
+/* header 开始 */
+#header{
+    width: 100vw;
+    height: 90px;
+    background-color: #292e3b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#header #title{
+    width: 60%;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    color: #b4c2dc;
+    font-size: 2em;
+    cursor: pointer;
+}
+#header #user{
+    width: 40%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: relative;
+}
+#header #user .username{
+    color: #b4c2dc;
+    line-height: 90px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+#header #user .avatar{
+    border-radius: 45px;
+    margin-right: 15px;
+    transform: scale(.8);
+    cursor: pointer;
+}
+#header #user #menu{
+    width: 20vw;
+    background-color: #292e3b;
+    position: absolute;
+    top: 90px;
+    right: -20vw;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+#header #user #menu a{
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    color: #b4c2dc;
+}
+#header #user #menu a:hover{
+    filter: brightness(1.2);
+}
+#header #user #menu .id{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #b4c2dc;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* header 结束 */
+
+
+/* main 开始 */
+#main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#sidebar{
+    width: 20vw;
+    height: calc(100vh - 90px);
+    background-color: #292e3b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 250px;
+    flex-grow: 1;
+    transition: 0.5s;
+}
+#sidebar a{
+    width: 80%;
+    height: 10vh;
+    color: #b4c2dc;
+    text-align: center;
+    line-height: 10vh;
+    background-color: #2c3a4f;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+#sidebar a:hover{
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+#content{
+    width: 80vw;
+    height: calc(100vh - 90px);
+    flex-grow: 4;
+}
+#chatbox{
+    width: 50vw;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+#chatbox .title{
+    width: 50vw;
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    cursor: pointer;
+    border-bottom: 2px solid #292e3b;
+    user-select: none;
+}
+#chatbox .window{
+    width: 50vw;
+    height: 50vh;
+    overflow: auto;
+    background-color: #b4c2dc;
+    transition: 0.5s;
+}
+#chatbox .window img{
+    border-radius: 50px;
+}
+#chatbox .left{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+#chatbox .right{
+    display: flex;
+    flex-direction: row-reverse;
+    cursor: pointer;
+}
+
+#typebox{
+    width: 50vw;
+    height: 100px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #b4c2dc;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+#typebox .input{
+    width: 30vw;
+    height: 40px;
+    border: none;
+    outline: none;
+    margin: 5vh;
+    background-color: #b4c2dc;
+    font-size: 1.1em;
+}
+#typebox .button{
+    width: 10vw;
+    height: 40px;
+    margin: 5vh;
+    text-align: center;
+    line-height: 40px;
+    background-color: #292e3b;
+    color: #b4c2dc;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 15px;
+    user-select: none;
+}
+#typebox .button:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+#typebox .button:active{
+    filter: brightness(1.2);
+}
+
+#setting{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#setting .setting-item{
+    width: 80%;
+    height: 50px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292e3b;
+}
+#setting .setting-item .input{
+    height: 30px;
+    line-height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+}
+#setting .save{
+    width: 10vw;
+    height: 50px;
+    background-color: #2c3a4f;
+    text-align: center;
+    line-height: 50px;
+    user-select: none;
+    color: #b4c2dc;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#setting .save:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+#setting .save:active{
+    filter: brightness(1.2);
+}
+/* main 结束 */
+
+
+/* userlist 开始 */
+
+#userList{
+    width: 25vw;
+    height: 100vh;
+    background-color: #292e3b;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+    overflow: auto;
+}
+#toggle{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #292e3b;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px 0 0 15px;
+    color: #b4c2dc;
+    font-size: 2em;
+    cursor: pointer;
+    transition: 0.5s;
+    user-select: none;
+}
+#userListLine{
+    width: 80%;
+    height: 80px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-self: start;
+    align-items: center;
+    padding: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 15px;
+}
+#userListLine:hover{
+    background-color: #2c3a4f;
+}
+#userListLine .avatar{
+    border-radius: 25px;
+    margin-right: 20px;
+}
+#userListLine .username{
+    color: #b4c2dc;
+}
+#userListLine .status{
+    color: green;
+}
+
+/* userlist 结束 */

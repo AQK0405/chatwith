@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/backManager.css">
+    <script src="../js/http.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatWith后台管理</title>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="user-manage">用户管理</div>
+    </div>
+
+    <div id="content">
+        <div id="searchbox">
+            <input class="search" type="text" placeholder="请输入：">
+            <button class="search-btn">搜索</button>
+        </div>
+        <div id="userlistbox">
+            <table id="userlist"></table>
+        </div>
+    </div>
+    <script src="../js/getData.js"></script>
+    <script src="../js/backManager.js"></script>
+</body>
+</html>
